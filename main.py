@@ -1,16 +1,22 @@
-# This is a sample Python script.
+"""
+Author: Aldrienne Janne Maniti
+Description: Determine if email address is valid
+"""
+import re
+from MailVerify import MailVerify
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Step 1: Check email syntax is valid
+# The domain part can contain alphanumeric characters (both upper and lower case).
+# It can also contain a hyphen (-) if it is not the first or last character.
+# The hyphen cannot be used consecutively.
 
+# Step 2: Check domain using PyNslookup OR dnslookup
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
+# Step 3: Email Ping
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    str_test_mail = 'aldriennej@gmail.com'
+    str_invalid_mail = 'test@mail'
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
